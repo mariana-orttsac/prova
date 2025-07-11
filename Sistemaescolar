@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class SistemaEscolar {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double[] notas = new double[8];
+
+        System.out.println("Digite as 8 notas do aluno (uma para cada bimestre):");
+        for (int i = 0; i < 8; i++) {
+            System.out.print("Nota " + (i + 1) + ": ");
+            notas[i] = scanner.nextDouble();
+        }
+
+        double primeiroBimestre = notas[0];
+        double segundoBimestre = notas[1];
+        double terceiroBimestre = notas[2];
+        double quartoBimestre = notas[3];
+        double quintoBimestre = notas[4];
+        double sextoBimestre = notas[5];
+        double setimoBimestre = notas[6];
+        double oitavoBimestre = notas[7];
+
+        double primeiroSemestre = (primeiroBimestre + segundoBimestre + terceiroBimestre + quartoBimestre) / 4;
+        double segundoSemestre = (quintoBimestre + sextoBimestre + setimoBimestre + oitavoBimestre) / 4;
+        double mediaFinal = (primeiroSemestre + segundoSemestre) / 2;
+
+        System.out.println("\nResultados:");
+        System.out.println("1º Bimestre: " + primeiroBimestre);
+        System.out.println("2º Bimestre: " + segundoBimestre);
+        System.out.println("3º Bimestre: " + terceiroBimestre);
+        System.out.println("4º Bimestre: " + quartoBimestre);
+        System.out.println("1º Semestre: " + primeiroSemestre);
+        System.out.println("5º Bimestre: " + quintoBimestre);
+        System.out.println("6º Bimestre: " + sextoBimestre);
+        System.out.println("7º Bimestre: " + setimoBimestre);
+        System.out.println("8º Bimestre: " + oitavoBimestre);
+        System.out.println("2º Semestre: " + segundoSemestre);
+        System.out.println("Média Final: " + mediaFinal);
+
+        scanner.close();
+    }
+} 
